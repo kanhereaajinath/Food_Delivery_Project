@@ -1,0 +1,14 @@
+.food-dispaly{
+    margin-top: 30px;
+}
+.food-dispaly h2{
+    font-size: maz(2vw,24px);
+    font-weight: 600;
+}
+.food-dispalay-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Fixed typo */
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 30px;
+}

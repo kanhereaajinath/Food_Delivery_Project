@@ -1,0 +1,146 @@
+/* Fullscreen modal container */
+.login-popup {
+    position: fixed; /* Fixed to the viewport */
+    z-index: 1000; /* High z-index for overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+    display: grid;
+    place-items: center; /* Centers the form vertically and horizontally */
+}
+
+/* Form container */
+.login-popup-container {
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* Title section */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.login-popup-title h2 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 0;
+}
+
+.login-popup-title img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Input fields */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-popup-inputs input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: tomato;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: tomato;
+}
+
+/* Checkbox and terms section */
+.login-popup-condition {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: #666666;
+}
+
+.login-popup-condition input {
+    margin-top: 3px;
+}
+
+.login-popup-condition p {
+    margin: 0;
+}
+
+.login-popup-condition p span {
+    color: tomato;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-popup-condition p span:hover {
+    color: tomato;
+}
+
+/* Bottom links for login/signup toggle */
+.login-popup-container p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+.login-popup-container p span {
+    color:tomato;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login-popup-container p span:hover {
+    color: tomato;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 500px) {
+    .login-popup-container {
+        width: 90%; /* Make the form more compact */
+        padding: 20px;
+    }
+
+    .login-popup-title h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
